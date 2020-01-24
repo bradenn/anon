@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<%- include("partials/header.ejs"); %>
+
+<body>
+<%- include("partials/nav.ejs"); %>
+
+<div class="container" style="margin-top:1em;">
+
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+            <h1 style="margin-bottom: 0;">Admin</h1>
+            <small class="text-muted">Change information about the website</small>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/u/<%= user.username %>">Profile</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                </ol>
+            </nav>
+            <div style="margin-bottom: 4px;">
+                <h5 style="margin-bottom: 0.25em;">Streams</h5>
+                <small class="text-muted account_info">There are currently <%= streams.length %> live streams.</small>
+
+            </div>
+            <div class="card" style="padding-bottom: 0;">
+                <div class="card-body" style="max-height: 33vh; overflow-y: scroll;">
+                    <table class="table table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Bandwidth</th>
+                            <th scope="col">Bitrate</th>
+                            <th scope="col">Resolution</th>
+                            <th scope="col">Streamer</th>
+                            <th scope="col">Views</th>
+                            <th scope="col">Viewers</th>
+                            <th scope="col">Likes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% streams.forEach((stream)=>{ %>
+                            <tr>
+                                <td style="max-width: 10em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%= stream.name %></td>
+                                <td><%= timeSince(new Date(stream.date)) %></td>
+                                <td><%= formatBytes(((new Date() - new Date(stream.date))/1000)*525000) %></td>
+                                <td>4.2Mbps</td>
+                                <td>1080x1920@30</td>
+                                <td><%= stream.owner.username %></td>
+                                <td><%= stream.views %></td>
+                                <td><%= stream.viewers %></td>
+                                <td><%= stream.likes.length %></td>
+                            </tr>
+                        <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+
+
+<%- include("partials/footer.ejs"); %>
+</html>
+
+<%
+function formatBytes(bytes, decimals = 2) {
+    if (bytes === 0) return '0 Bytes';
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+}
+
+function timeSince(date) {
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval >= 1) {
+        return interval + " year" + ((interval == 1)?"":"s");
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) {
+        return interval + " month" + ((interval == 1)?"":"s");
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval >= 1) {
+        return interval + " day" + ((interval == 1)?"":"s");
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval >= 1) {
+        return interval + " hour" + ((interval == 1)?"":"s");
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval >= 1) {
+        return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+}
+
+var aDay = 24 * 60 * 60 * 1000
+%>

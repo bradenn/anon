@@ -1,0 +1,559 @@
+:root {
+    --normal-shadow: 0 1px 1px 0 rgba(60, 64, 67, .08), 0 1px 3px 1px rgba(60, 64, 67, .16);
+    --sub-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    --primary: #007AFF;
+    --bg: #fafafa;
+    --card-bg: #fff;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--bg);
+}
+
+/* Buttons */
+
+.btn-outline-dark {
+    border-color: #ced4da;
+}
+
+.btn-outline-dark:hover {
+    background-color: inherit;
+    border-color: #ced4da;
+}
+
+/* Ratings */
+.rating-circle {
+    width: 1em;
+    height: 1em;
+
+    box-shadow: var(--normal-shadow);
+    border-radius: 100%;
+}
+
+.rating-circle.p {
+    background: linear-gradient(to bottom right, #00cc66 0%, #66ff66 100%);
+}
+
+.rating-circle.n {
+    background: linear-gradient(to bottom right, #0033cc 0%, #99ccff 100%);
+}
+
+.rating-circle.letter {
+    text-align: center;
+    color: #fff;
+    line-height: 2em;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+    background-color: var(--card-bg);
+    box-shadow: var(--normal-shadow);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #000 !important;
+}
+
+/* Links */
+
+a.no-bs {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.no-bs:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+
+.nav-button {
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    padding: 4px 8px;
+    margin: 4px 8px;
+}
+
+.navbar {
+    box-shadow: var(--normal-shadow);
+    padding: 0;
+}
+
+.nav-primary.active {
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    color: #000 !important;
+}
+
+.navbar-brand {
+    font-family: "IBM Plex Sans Light";
+    padding-bottom: 0;
+}
+
+.bg-primary {
+    background-color: var(--card-bg) !important;
+}
+
+.nav-primary {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #000 !important;
+}
+
+.nav-secondary {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #000 !important;
+}
+
+.divider-vertical {
+    height: 32px; /* any height */
+    width: 1px;
+    border-left: 1px solid rgba(60, 64, 67, .16); /* right or left is the same */
+    margin: 0 1em;
+}
+
+.nav-magic {
+    border-radius: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #fff !important;
+    padding: .25em 1em !important;
+    margin: 0 .5em;
+    background: linear-gradient(to bottom right, #0099ff 0%, #99ff99 100%);
+    box-shadow: var(--normal-shadow);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.nav-magic-secondary {
+    border-radius: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #fff !important;
+    padding: .25em 1em !important;
+    margin: 0 .5em;
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+    box-shadow: var(--normal-shadow);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.nav-circle {
+
+    border-radius: 1em;
+    color: #fff !important;
+    padding: .25em 1em !important;
+    margin: 0 .5em;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+}
+
+.nav-circle i {
+    background: linear-gradient(to bottom right, #0099ff 0%, #99ff99 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-magic:hover {
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, .08), 0 1px 3px 2px rgba(60, 64, 67, .16);
+}
+
+.nav-sep {
+    height: 100%;
+    width: 1px;
+    background-color: #1b1e21;
+}
+
+.mr-sm-2 {
+    height: 26px;
+}
+
+.dropdown-menu {
+    margin-top: 5px;
+    border: none;
+    box-shadow: var(--normal-shadow);
+    border-radius: 0.25em;
+}
+
+/* Tables */
+
+.table th {
+    border: none;
+}
+
+
+.table td{
+    border: none;
+}
+
+/* Streaming Windows */
+
+.video-stream {
+    min-height: 10em;
+    background-color: #000;
+}
+
+
+/* Sliders */
+.slider {
+    text-align: center;
+    border-radius: 2em;
+    padding: 0;
+    box-shadow: var(--normal-shadow);
+}
+
+.slider div {
+    width: auto;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    text-decoration: none;
+    color: #000;
+    border-radius: 2em;
+}
+
+.slider a:hover {
+    text-decoration: none;
+}
+
+.badge-magic {
+    color: #fff !important;
+    border-radius: 2em;
+    padding: 1em 1em;
+    background: linear-gradient(to bottom right, #0099ff 0%, #99ff99 100%);
+    box-shadow: var(--normal-shadow);
+    transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
+}
+
+.badge-magic-secondary {
+    color: #fff !important;
+    border-radius: 2em;
+    padding: 1em 1em;
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+    box-shadow: var(--normal-shadow);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+
+/* Drawer */
+
+.drawer {
+    padding: 8px;
+}
+
+
+.list-group-item.active {
+    background-color: rgba(25, 118, 210, 0.12);
+    color: rgba(25, 118, 210);
+}
+
+.list-group-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.list-group-item i {
+    width: 1em;
+}
+
+.drawer-link {
+    margin-left: 24px;
+}
+
+.list-group-item {
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 8px;
+    transition: 0.15s;
+    padding-left: 16px;
+    font-weight: 500;
+    background-color: inherit;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 0, 0, 0.88);
+}
+
+.list-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* Thumbnail */
+
+.stream-preview {
+    text-decoration: none;
+    max-width: 360px;
+    width: 100%;
+    margin: 1em 1em 0.25em;
+}
+
+.stream-thumbnail {
+    max-width: 360px;
+    width: 100%;
+    height: 200px;
+    box-shadow: var(--normal-shadow);
+}
+
+/* Typography */
+
+h5 {
+    font-size: 1.17rem;
+    font-weight: 500;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+
+.chat-displayname {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.chat-message {
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.60);
+}
+
+label {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.text-muted{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: rgba(0,0,0,0.60) !important;
+}
+
+/* Cards */
+
+.img-md {
+    background-size: contain;
+    background-position: center;
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+}
+
+.img-lg {
+    background-size: contain;
+    background-position: center;
+    border-radius: 100%;
+    height: 3em;
+    width: 3em;
+}
+
+.form-element {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-group-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.displayname {
+    font-weight: initial;
+    margin: 0 !important;
+}
+
+.bg-img {
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-position: center;
+    background-size: 150%;
+    background-color: black;
+}
+
+.card {
+    border: none;
+    box-shadow: var(--normal-shadow);
+    border-radius: 0.25em;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.card h5 {
+    margin: 0.25em 16px;
+}
+
+.card h6 {
+    margin: 0.5em 0.5em;
+    font-weight: 500;
+}
+
+.card .card-pill {
+    height: 3em;
+    border-radius: 8px;
+    margin: 0.2em 0.5em;
+    padding: 0em 0.5em 0em 0.5em;
+    align-items: center;
+    box-shadow: var(--normal-shadow);
+    background-color: var(--card-bg);
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.card-header{
+    padding: .50rem .75rem;
+}
+
+.card-pill.pill-fluid {
+    height: unset !important;
+}
+
+.pill-body {
+    margin: 0.5em 0.5em;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+.picture-md {
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0em 0.25em;
+    border-radius: 100%;
+    padding: 100%;
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+}
+
+.card-small-secondary {
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    color: #fff;
+}
+
+
+.card-small-secondary h4 {
+    margin: .5em
+}
+
+.card-interest {
+    background: linear-gradient(to bottom right, #0099ff 0%, #99ff99 100%);
+    width: 100%;
+    padding-top: 25% !important;
+    border: 2px solid inherit !important;
+    transition: opacity 2s;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.card-interest:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-interest h3 {
+    position: absolute;
+    color: white;
+    margin: 12px;
+    top: 0;
+    left: 0;
+}
+
+.card-interest span {
+    position: absolute;
+    display: none;
+    color: white;
+    margin: 8px;
+    top: 0;
+    right: 0;
+}
+
+.card-interest small.yes {
+    position: absolute;
+    display: block;
+    color: white;
+    margin: 8px;
+    bottom: 0;
+    left: 0;
+}
+
+.card-interest small.no {
+    position: absolute;
+    display: none;
+    color: white;
+    margin: 8px;
+    bottom: 0;
+    left: 0;
+}
+
+.card-interest.interest-selected small.yes {
+    display: none;
+}
+
+.card-interest.interest-selected small.no {
+    display: block;
+}
+
+.card-interest.interest-selected span {
+    position: absolute;
+    display: block;
+    color: white;
+    margin: 8px;
+    top: 0;
+    right: 0;
+}
+
+.card-interest span.yes {
+    position: absolute;
+    display: block;
+    color: white;
+    margin: 8px;
+    top: 0;
+    right: 0;
+}
+
+.card-interest.interest-selected span.yes {
+    position: absolute;
+    display: none;
+    color: white;
+    margin: 8px;
+    top: 0;
+    right: 0;
+}
+
+.card-interest.interest-selected span.no {
+    position: absolute;
+    display: block;
+    color: white;
+    margin: 8px;
+    top: 0;
+    right: 0;
+}
+
+.interest-selected {
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+    transition: opacity 2s;
+}
+
+.btn.btn-magic {
+    padding: 8px 48px;
+    color: #fff;
+    background: linear-gradient(to bottom right, #0099ff 0%, #ff66ff 100%);
+    border: none;
+}
+
+/* Sidebar */
